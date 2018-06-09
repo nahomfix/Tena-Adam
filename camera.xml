@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<TextView-->
+        <!--android:id="@+id/saveText"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginEnd="16dp"-->
+        <!--android:onClick=""-->
+        <!--android:text="Save"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <LinearLayout
+        android:id="@+id/linearLayoutRight"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="145dp"
+        android:layout_height="47dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="39dp"
+            android:layout_height="wrap_content"
+            android:background="#0000"
+            android:src="@drawable/checkmark24"
+            android:onClick="savePhoto"/>
+
+        <TextView
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="#43a047"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0000"
+            android:text="Save"
+            android:onClick="savePhoto"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutLeft"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="145dp"
+        android:layout_height="47dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="39dp"
+            android:layout_height="wrap_content"
+            android:background="#0000"
+            android:src="@drawable/incorrect"
+            android:onClick="retakePhoto"/>
+
+        <TextView
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0000"
+            android:text="Retake"
+            android:textColor="#c0392b"
+            android:onClick="retakePhoto"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="502dp"
+        android:layout_height="554dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutRight" />
+
+    <!--<Button-->
+        <!--android:id="@+id/openCam"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Open Camera"/>-->
+
+</android.support.constraint.ConstraintLayout>
