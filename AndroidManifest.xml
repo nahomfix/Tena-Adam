@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kaleab.tenaadam">
+
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Walkthrough.WalkThrough"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomePage.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Walkthrough.RegisterActivity" />
+        <activity android:name=".About.MainAbout" />
+        <activity android:name=".Camera.Camera"/>
+        <activity android:name=".Gallery.Gallery"/>
+        <activity android:name=".Gallery.ImageDetails"/>
+        <activity
+            android:name=".Passcode.PasscodeActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".Passcode.ResetPasscode"
+            android:label="@string/title_activity_reset_passcode"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Passcode.UpdatePasscode"></activity>
+
+    </application>
+
+</manifest>
